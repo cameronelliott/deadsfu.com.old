@@ -1,25 +1,25 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "SFU1"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "Simple, Scalable WebRTC"
+description = "The surprisingly simple SFU for WebRTC system building and broadcasting."
 
 ## Open Graph + Twitter Cards
-images = ["doks.png"]
-twitterSite = "henkverlinde"
-twitterCreator = "henkverlinde"
-facebookAuthor = "verlinde.henk"
-facebookPublisher = "verlinde.henk"
+images = ["sfu1.png"]
+twitterSite = "cameronelliottx"
+twitterCreator = "cameronelliottx"
+facebookAuthor = "cameron.elliott.357"
+facebookPublisher = "cameron.elliott.357"
 ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = "logo-doks.png"
-schemaTwitter = "https://twitter.com/henkverlinde"
-schemaLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
-schemaGitHub = "https://github.com/h-enk"
+schemaLogo = "logo-sfu1.png"
+schemaTwitter = "https://twitter.com/cameronelliottx"
+schemaLinkedIn = "https://www.linkedin.com/in/camelliott/"
+schemaGitHub = "https://github.com/x186k"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -36,14 +36,14 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+footer = "Powered by <a href=\"https://pion.ly/\">Pion</a>, <a href=\"https://caddyserver.com/\">Caddy</a>, and <a href=\"https://www.docker.com/\">Docker</a>"
 
 # Alert
 alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = "Like SFU1? <a class=\"alert-link\" href=\"https://github.com/x186k/sfu1/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/x186k/sfu1"
 editPage = false
 
 [options]
