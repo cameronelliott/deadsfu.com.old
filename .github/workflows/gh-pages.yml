@@ -12,12 +12,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-20.04
-
-    strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [14.x, 15.x]
-
     steps:
     - uses: actions/checkout@v2
 
