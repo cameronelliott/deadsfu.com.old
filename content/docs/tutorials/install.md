@@ -15,75 +15,75 @@ toc: true
 
 
 - [Linux](#linux)
-  - [Install binaries for Linux ARM64](#install-binaries-for-linux-arm64)
-  - [Install binaries for Linux AMD64](#install-binaries-for-linux-amd64)
-- [Docker on Linux with amd64 CPUs](#docker-on-linux-with-amd64-cpus)
+  - [Install Linux binaries for Intel, AMD](#install-linux-binaries-for-intel-amd)
+  - [Install Linux binaries for ARM](#install-linux-binaries-for-arm)
+- [Docker](#docker)
+  - [Docker on Linux](#docker-on-linux)
+  - [Docker on macOS, Windows](#docker-on-macos-windows)
 - [macOS](#macos)
-  - [macOS Intel CPU](#macos-intel-cpu)
-- [macOS Apple CPU](#macos-apple-cpu)
+  - [Install macOS binaries for Intel CPUs](#install-macos-binaries-for-intel-cpus)
+  - [Install macOS binaries for Apple CPUs](#install-macos-binaries-for-apple-cpus)
 - [Windows](#windows)
-- [Docker on Linux on non-amd64, ie Raspberry Pi](#docker-on-linux-on-non-amd64-ie-raspberry-pi)
-- [Docker on non-Linux Platforms](#docker-on-non-linux-platforms)
+  - [Install Windows binaries for Intel, AMD CPUs](#install-windows-binaries-for-intel-amd-cpus)
 - [Compile from Source](#compile-from-source)
 
 
 ## Linux
-### Install binaries for Linux ARM64
-### Install binaries for Linux AMD64
+{{< alert icon="💡" text="<code>amd64</code> binaries are what most people need for Linux. Much less common is Linux servers running on <code>arm64</code> processors." />}}
+### Install Linux binaries for Intel, AMD   
+Download and untar the tar ball:
 
-{{< alert icon="💡" text="Linux binaries are provided for `amd64` and `arm64` compatible CPUs." />}}
-
-Download the latest binary tar ball:
-
-{{< btn-copy text="curl -OL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-amd64.tar.gz | tar xvz" >}}
+{{< btn-copy text="curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-amd64.tar.gz | tar xvz" >}}
 
 ```bash
 
-curl -OL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-amd64.tar.gz | tar xvz
+curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-amd64.tar.gz | tar xvz
 ```
+Jump to [Quick Start]({{< relref "quickstart" >}}).
+### Install Linux binaries for ARM 
+Download and untar the tar ball:
 
-Untar the tar ball:
-
-{{< btn-copy text="tar xzf sfu1-linux-amd64.tar.gz" >}}
+{{< btn-copy text="curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-arm64.tar.gz | tar xvz" >}}
 
 ```bash
-tar xzf sfu1-linux-amd64.tar.gz
+
+curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-linux-arm64.tar.gz | tar xvz
 ```
-
-## Docker on Linux with amd64 CPUs
-
+## Docker
+Docker is a great way to run <code>sfu1</code>. But we recommend if you are new to Docker that you get started with plain-old binaries, rather than Docker. If you are experienced in Docker, we recommend using Docker, as containers are a great way to scale <code>sfu1</code>.  
+### Docker on Linux
 ```bash
 docker run --network host x186k/sfu1 /app/main -https-port 443 -domain foo2.ddns5.com
 ```
-
-
+### Docker on macOS, Windows
+Docker is tightly coupled with the Linux kernel. So, when you run Docker on other operating systems, like Windows or macOS you are probably running a Linux kernel under a virtual machine. *WE DON'T RECOMMEND USING sfu1 UNDER DOCKER ON NON-LINUX SYSTEMS.* It might work for you, but don't be surprised if you have performance issues.
 ## macOS
-### macOS Intel CPU
-
-Download the latest binary tar ball:
-
-{{< btn-copy text="curl -OL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-amd64.tar.gz" >}}
-
+{{< alert icon="💡" text="On macOS <code>amd64</code> binaries are for Intel CPUs. <code>arm64</code> is needed for Apple's newer ARM processors." />}} 
+### Install macOS binaries for Intel CPUs 
+Download and untar the tar ball:
+{{< btn-copy text="curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-amd64.tar.gz | tar xvz" >}}
 ```bash
 
-curl -OL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-amd64.tar.gz
+curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-amd64.tar.gz | tar xvz
 ```
-
-Untar the tar ball:
-
-{{< btn-copy text="tar xzf sfu1-darwin-amd64.tar.gz" >}}
-
+### Install macOS binaries for Apple CPUs 
+Download and untar the tar ball:
+{{< btn-copy text="curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-arm64.tar.gz | tar xvz" >}}
 ```bash
-tar xzf sfu1-darwin-amd64.tar.gz
-```
 
-## macOS Apple CPU
+curl -sL https://github.com/x186k/sfu1/releases/latest/download/sfu1-darwin-arm64.tar.gz | tar xvz
+``` 
 ## Windows
-## Docker on Linux on non-amd64, ie Raspberry Pi 
-## Docker on non-Linux Platforms
+### Install Windows binaries for Intel, AMD CPUs 
+{{< alert icon="💡" text="These directions work on Windows 10 build# >=17063 or Windows Server 2019" />}} 
+Download zip file:
+{{< btn-copy text="curl  https://github.com/x186k/sfu1/releases/latest/download/sfu1-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp" >}}
+```bash
+
+curl  https://github.com/x186k/sfu1/releases/latest/download/sfu1-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp
+``` 
 
 ## Compile from Source
-
 There are two repos you need to compile from source: `sfu1` and `sfu1-binaries`.
 `sfu1-binaries` must be nested inside `sfu1` when compiling.
 
@@ -98,9 +98,7 @@ Clone the main repo:
 ```bash
 git clone https://github.com/x186k/sfu1.git
 ```
-
 Change dir:
-
 {{< btn-copy text="cd sfu1" >}}
 
 ```bash
