@@ -1,8 +1,8 @@
-name = "SFU1"
+name = "DeadSFU"
 license = "MIT"
-licenselink = "https://github.com/x186k/sfu1/blob/main/LICENSE"
-description = "SFU1 is for building Simple, Scalable WebRTC Systems."
-homepage = "https://sfu1.com/"
+licenselink = "https://github.com/x186k/deadsfu/blob/main/LICENSE"
+description = "DeadSFU is for building Simple, Scalable WebRTC Systems."
+homepage = "https://deadsfu.com/"
 tags = ["sfu", "webrtc", "broadcasting", "streaming", "video", "real-time", "low-latency"]
 features = ["scalable", "obs", "open-source", "mit", "free", "docker", "kubernetes", "digital ocean"]
 min_version = "0.75.0"

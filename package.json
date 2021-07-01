@@ -8,7 +8,7 @@
   "browserslist": [
     "defaults"
   ],
-  "repository": "https://github.com/x186k/sfu1",
+  "repository": "https://github.com/x186k/deadsfu",
   "license": "MIT",
   "publishConfig": {
     "access": "public"

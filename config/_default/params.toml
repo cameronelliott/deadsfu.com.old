@@ -1,13 +1,13 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "sfu1"
+title = "DeadSFU"
 titleSeparator = "-"
 titleAddition = "Simple, Scalable WebRTC"
 description = "The surprisingly simple SFU for WebRTC system building and broadcasting."
 
 ## Open Graph + Twitter Cards
-images = ["sfu1.png"]
+images = ["deadsfu.png"]
 twitterSite = "cameronelliottx"
 twitterCreator = "cameronelliottx"
 facebookAuthor = "cameron.elliott.357"
@@ -16,7 +16,7 @@ ogLocale = "en_US"
 
 ## JSON-LD
 schemaType = "Organization"
-schemaLogo = "logo-sfu1.png"
+schemaLogo = "logo-deadsfu.png"
 schemaTwitter = "https://twitter.com/cameronelliottx"
 schemaLinkedIn = "https://www.linkedin.com/in/camelliott/"
 schemaGitHub = "https://github.com/x186k"
@@ -40,10 +40,10 @@ footer = "Powered by <a href=\"https://pion.ly/\">Pion</a>, <a href=\"https://ca
 
 # Alert
 alert = false
-alertText = "Like SFU1? <a class=\"alert-link\" href=\"https://github.com/x186k/sfu1/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = "Like DeadSFU? <a class=\"alert-link\" href=\"https://github.com/x186k/deadsfu/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/x186k/sfu1"
+docsRepo = "https://github.com/x186k/deadsfu"
 editPage = false
 
 [options]
