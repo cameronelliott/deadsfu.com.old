@@ -33,8 +33,6 @@ toc: true
 ### Install Linux binaries for Intel, AMD   
 Download and untar the tar ball:
 
-{{< btn-copy text="curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-amd64.tar.gz | tar xvz" >}}
-
 ```bash
 
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-amd64.tar.gz | tar xvz
@@ -42,9 +40,6 @@ curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux
 Jump to [Quick Start]({{< relref "quickstart" >}}).
 ### Install Linux binaries for ARM 
 Download and untar the tar ball:
-
-{{< btn-copy text="curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-arm64.tar.gz | tar xvz" >}}
-
 ```bash
 
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-arm64.tar.gz | tar xvz
@@ -61,14 +56,12 @@ Docker is tightly coupled with the Linux kernel. So, when you run Docker on othe
 {{< alert icon="💡" text="On macOS <code>amd64</code> binaries are for Intel CPUs. <code>arm64</code> is needed for Apple's newer ARM processors." />}} 
 ### Install macOS binaries for Intel CPUs 
 Download and untar the tar ball:
-{{< btn-copy text="curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-amd64.tar.gz | tar xvz" >}}
 ```bash
 
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-amd64.tar.gz | tar xvz
 ```
 ### Install macOS binaries for Apple CPUs 
 Download and untar the tar ball:
-{{< btn-copy text="curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-arm64.tar.gz | tar xvz" >}}
 ```bash
 
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-arm64.tar.gz | tar xvz
@@ -77,7 +70,6 @@ curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwi
 ### Install Windows binaries for Intel, AMD CPUs 
 {{< alert icon="💡" text="These directions work on Windows 10 build# >=17063 or Windows Server 2019" />}} 
 Download zip file:
-{{< btn-copy text="curl  https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp" >}}
 ```bash
 
 curl  https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp
@@ -92,31 +84,20 @@ You don't need archane git tools like `git lfs` or `git submodules`.
 You need a version of Go greater than 1.16, we recommend 1.16.5 or later.
 
 Clone the main repo:
-
-{{< btn-copy text="git clone https://github.com/x186k/deadsfu.git" >}}
-
 ```bash
 git clone https://github.com/x186k/deadsfu.git
 ```
 Change dir:
-{{< btn-copy text="cd deadsfu" >}}
-
 ```bash
 cd deadsfu
 ```
 
 Clone the binaries repo:
-
-{{< btn-copy text="git clone https://github.com/x186k/deadsfu-binaries.git" >}}
-
 ```bash
 git clone https://github.com/x186k/deadsfu-binaries.git
 ```
 
 Build with Go:
-
-{{< btn-copy text="go build ." >}}
-
 ```bash
 go build .
 ```
