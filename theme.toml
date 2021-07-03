@@ -1,14 +1,14 @@
-name = "Doks"
+name = "DeadSFU"
 license = "MIT"
-licenselink = "https://github.com/h-enk/doks/blob/master/LICENSE"
-description = "Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
 
-homepage = "https://github.com/h-enk/doks"
-demosite = "https://doks.netlify.app"
+licenselink = "https://github.com/x186k/deadsfu/blob/main/LICENSE"
+description = "DeadSFU is for building Simple, Scalable WebRTC Systems."
+homepage = "https://deadsfu.com/"
 
-tags = ["landing page", "documentation", "blog", "minimal", "modern", "customizable", "search", "dark mode", "bootstrap"]
-features = ["security aware", "fast by default", "seo-ready", "development tools", "bootstrap framework", "netlify-ready", "full text search", "page layouts", "dark mode"]
+tags = ["sfu", "webrtc", "broadcasting", "streaming", "video", "real-time", "low-latency"]
+features = ["scalable", "obs", "open-source", "mit", "free", "docker", "kubernetes", "digital ocean"]
+min_version = "0.75.0"
 
 [author]
-  name = "Henk Verlinde"
-  homepage = "https://henkverlinde.com/"
+  name = "Cameron Elliott"
+  homepage = "https://cameronelliott.com/"

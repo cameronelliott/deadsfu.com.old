@@ -1,20 +1,25 @@
 # Meta Data for SEO
 
 ## Homepage
-title = "Doks"
+title = "DeadSFU"
 titleSeparator = "-"
-titleAddition = "Modern Documentation Theme"
-description = "Doks is a Hugo theme helping you build modern documentation websites that are secure, fast, and SEO-ready — by default."
+titleAddition = "Simple, Scalable WebRTC"
+description = "The surprisingly simple SFU for WebRTC system building and broadcasting."
 
-## Open Graph
-images = ["doks.png"]
+
+## Open Graph + Twitter Cards
+images = ["deadsfu.png"]
+facebookAuthor = "cameron.elliott.357"
+facebookPublisher = "cameron.elliott.357"
+
+
 ogLocale = "en_US"
 domainTLD = "doks.netlify.app"
 titleHome = "Doks Theme"
 
 ## Twitter Cards
-twitterSite = "@getdoks"
-twitterCreator = "@henkverlinde"
+twitterSite = "cameronelliottx"
+twitterCreator = "cameronelliottx"
 
 ## JSON-LD
 # schemaType = "Person"
@@ -25,15 +30,15 @@ schemaAuthorTwitter = "https://twitter.com/henkverlinde"
 schemaAuthorLinkedIn = "https://www.linkedin.com/in/henkverlinde/"
 schemaAuthorGitHub = "https://github.com/h-enk"
 schemaLocale = "en-US"
-schemaLogo = "logo-doks.png"
+schemaLogo = "logo-deadsfu.png"
 schemaLogoWidth = 512
 schemaLogoHeight = 512
 schemaImage = "doks.png"
 schemaImageWidth = 1280
 schemaImageHeight = 640
-schemaTwitter = "https://twitter.com/getdoks"
-schemaLinkedIn = ""
-schemaGitHub = "https://github.com/h-enk/doks"
+schemaTwitter = "https://twitter.com/cameronelliottx"
+schemaLinkedIn = "https://www.linkedin.com/in/camelliott/"
+schemaGitHub = "https://github.com/x186k"
 schemaSection = "blog"
 
 ## Sitelinks Search Box
@@ -50,15 +55,15 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
-copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
+footer = "Powered by <a href=\"https://pion.ly/\">Pion</a>, <a href=\"https://caddyserver.com/\">Caddy</a>, and <a href=\"https://www.docker.com/\">Docker</a>, <a href=\"https://www.netlify.com/\">Netlify</a>, <a href=\"https://gohugo.io/\">Hugo</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+# copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
 
 # Alert
 alert = false
-alertText = "Like Doks? <a class=\"alert-link\" href=\"https://github.com/h-enk/doks/stargazers\">Star on GitHub</a>. Thanks!</a>"
+alertText = "Like DeadSFU? <a class=\"alert-link\" href=\"https://github.com/x186k/deadsfu/stargazers\">Star on GitHub</a>. Thanks!</a>"
 
 # Edit Page
-docsRepo = "https://github.com/h-enk/doks"
+docsRepo = "https://github.com/x186k/deadsfu"
 editPage = false
 
 [options]
