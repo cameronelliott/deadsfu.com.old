@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://deadsfu.com/3419512222/sitemap.xml
