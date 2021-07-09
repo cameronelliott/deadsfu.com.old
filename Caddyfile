@@ -1,0 +1,7 @@
+deadsfu.com
+
+#respond "Hello, world!"
+
+
+root * /root/public
+file_server
