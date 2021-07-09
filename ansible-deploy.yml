@@ -1,7 +1,7 @@
 
 # sudo lsof -i :53
 
-- hosts: prodserver
+- hosts: deadsfucom
   become: yes
   become_user: root
   gather_facts: false
@@ -12,40 +12,10 @@
 
      
   tasks:
-
-# this article guided disabling systemd-resolv and enabling
-# using external dns resolvers
-# https://medium.com/@niktrix/getting-rid-of-systemd-resolved-consuming-port-53-605f0234f32f
-
-
-    - name: Create a symbolic link
-      ansible.builtin.file:
-        src: /run/systemd/resolve/resolv.conf
-        dest: /etc/resolv.conf
-        owner: root
-        group: root
-        force: yes
-        follow: false
-        state: link
-
-    - name: fixup resolv.conf
-      ansible.builtin.copy:
-        content: "[Resolve]\nDNS=1.1.1.1 8.8.8.8\nFallbackDNS=8.8.4.4\nDNSStubListener=no\n"
-        follow: no
-        dest: /etc/systemd/resolved.conf
-      register: foo1
-
-    - name: disable systemd-resolved
-      systemd: name=systemd-resolved state=stopped enabled=no
-
-
       # vars:
       #   ansible_python_interpreter: /usr/bin/python3
 
-      # how to disable the dns https://unix.stackexchange.com/a/516808/384677
 
-    - name: ufw 53
-      ufw: rule=allow port=53 proto=any
     - name: ufw 80
       ufw: rule=allow port=80 proto=tcp
     - name: ufw 443
@@ -64,71 +34,44 @@
       pip:
         name: docker
 
-
-
-    - name: ddns5 service
-      template: src=systemd.j2 dest=/etc/systemd/system/ddns5.service
-      vars:
-        TWILIO_A: "{{ lookup('env','TWILIO_A') }}"
-        TWILIO_B: "{{ lookup('env','TWILIO_B') }}"
-      notify: "restart-ddns"
-
-    - name: logrotate
-      template: src=logrotate.j2 dest=/etc/logrotate.d/ddns5
-
-
-    - name: Copy file with owner and permissions
+    - name: copy Caddyfile
       ansible.builtin.copy:
-        src: ddns5-linux-amd64
-        dest: ~/ddns5
+        src: Caddyfile
+        dest: /root/
         owner: root
         group: root
         mode: '0555'
-      notify: "restart-ddns"
-
-    - name: copy coredns config corefile
-      ansible.builtin.copy:
-        src: Corefile
-        dest: /root
-        owner: root
-        group: root
-        mode: '0555'
-      register: newcorefile
-
-    - name: copy html files
-      ansible.builtin.copy:
-        src: static
-        dest: /root
-        owner: root
-        group: root
-        mode: '0555'
-      register: newcorefile
+      register: newcaddyfile
 
 
-    - name: Start
-      systemd: name=ddns5 state=started enabled=yes daemon_reload=yes
+    - name: Creates directory
+      file:
+        path: /root/public/3419512222
+        state: directory
+    - name: copy hugo output up
+      ansible.posix.synchronize:
+        src: public/
+        dest: /root/public/3419512222
 
 
-    - name: coredns docker container
+
+    - name: caddy docker container
       docker_container:
         working_dir: /root
         state: started
         container_default_behavior: no_defaults
-        name: coredns
-        image: coredns/coredns:1.8.3
+        name: caddy
+        image: caddy:2.4.3
         restart_policy: always
 #        recreate: yes
         ports:
-          - "53:53/udp"
-          - "53:53/tcp"
-        volumes: /root/:/root/
+          - "80:80/tcp"
+          - "443:443/tcp"
+        volumes: 
+          - /root/Caddyfile:/etc/caddy/Caddyfile
+          - /root/public:/root/public
 
-    - name: kill coredns if new config file
-      docker_container:
-        container_default_behavior: no_defaults
-        force_kill: yes
-        name: coredns
-      when: newcorefile
+
 
     
 
