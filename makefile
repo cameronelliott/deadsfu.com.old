@@ -1,18 +1,23 @@
 
 
+X=root@165.227.51.131
 
-
-all: build deploy
+all: deploy
 
 
 restart:
-	ssh root@165.227.51.131 docker restart caddy
+	ssh ${X} docker restart caddy
 	
-build:
-	./bin/hugo/hugo --gc --minify
-
-
 deploy:
+	./bin/hugo/hugo --gc --minify
+	ssh ${X} mkdir -p /root/public/3419512222
+	rsync public/ ${X}:/root/public/3419512222
+	tar czvf - --exclude node_modules . | ssh ${X} "cat > /root/public/deadsfu.com.tgz"
+
+
+
+
+ansible-setup:
 	ansible-playbook -i ansible-inventory.yml ansible-deploy.yml
 
 
