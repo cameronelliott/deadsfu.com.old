@@ -1,18 +1,20 @@
 
 
-X=root@165.227.51.131
+# no
+# X=root@165.227.51.131
+# we dont use vars so cut and paste to shell works better
 
 all: deploy
 
 
 restart:
-	ssh ${X} docker restart caddy
+	ssh root@165.227.51.131 docker restart caddy
 	
 deploy:
 	./bin/hugo/hugo --gc --minify
-	ssh ${X} mkdir -p /root/public/3419512222
-	rsync public/ ${X}:/root/public/3419512222
-	tar czvf - --exclude node_modules . | ssh ${X} "cat > /root/public/deadsfu.com.tgz"
+	ssh root@165.227.51.131 mkdir -p /root/public/3419512222
+	rsync -ar public/ root@165.227.51.131:/root/public/3419512222
+	tar czvf - --exclude node_modules . | ssh root@165.227.51.131 "cat > /root/public/deadsfu.com.tgz"
 
 
 

@@ -1,5 +1,5 @@
 ---
-title: "Starting DeadSFU"
+title: "Starting DeadSFU Tutorial"
 description: "How to run DeadSFU."
 lead: "How to run DeadSFU."
 date: 2020-10-13T15:21:01+02:00
@@ -16,8 +16,11 @@ toc: true
 
 ### Start the SFU:
 {{< tabs name="runtab" >}} 
-{{< tab name="Using Binaries" codelang="bash" >}}
+{{< tab name="Linux or macOS" codelang="bash" >}}
 ./deadsfu -s https://cameron42.ddns5.com
+{{< /tab >}}}
+{{< tab name="Windows" codelang="bash" >}}
+./deadsfu.exe -s https://cameron42.ddns5.com
 {{< /tab >}}}
 {{{< tab name="Using Docker" codelang="bash" >}}
 docker run --network host x186k/deadsfu /app/main -s https://cameron42.ddns5.com
@@ -49,10 +52,54 @@ https://cameron42.ddns5.com
 
 ## Start Transmitting
 
-<a class="btn btn-primary btn-lg px-4 mb-2" href="https://join.slack.com/t/deadsfu/shared_invite/zt-sv23oa10-XFFYoJHPty8BtuCmBthH_A" role="button">Join Slack</a>
+Open one browser tab to the URL you copied.
+
+You should have a camera connected to your system for transmission.
+
+Hit the `Send` button.
+
+You should see video of yourself as captured from your camera.
+
+This video is being sent to the SFU and ready for distribution.
+
+<figure>
+<img src="/binaries/send-button.png" border="5" style="height:100%;width:100%;object-fit:contain">
+</figure>
 
 
 ## Start Receiving
+
+Open one, two, or three browser tabs to the URL you copied.
+
+In each, hit the `Receive` button.
+
+In a second or two, you should see video being relayed from the SFU.
+
+<figure>
+<img src="/binaries/receive-button.png" border="5" style="height:100%;width:100%;object-fit:contain">
+</figure>
+
+## Try Simulcast
+
+By default when you send, you are sending using Simulcast, this means the sending-tab
+is encoding and sending three different levels of video.
+
+You change which of the three simulcast channels you are viewing by using the `Channel` drop down.
+
+<figure>
+<img src="/binaries/select-channel.png" border="5" style="height:100%;width:100%;object-fit:contain">
+</figure>
+
+## Next Steps
+
+The next step is really seeing how you can scale your video broadcast beyond a single SFU.
+
+Coming soon!
+
+
+
+
+
 
 
 
