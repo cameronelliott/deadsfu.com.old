@@ -2,6 +2,6 @@ deadsfu.com
 
 #respond "Hello, world!"
 
-
+encode zstd gzip
 root * /root/public
 file_server
