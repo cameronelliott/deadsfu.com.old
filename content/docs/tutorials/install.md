@@ -12,64 +12,60 @@ menu:
 weight: 130
 toc: true
 ---
-
-
-- [Linux](#linux)
+- [Linux on Intel, AMD64](#linux-on-intel-amd64)
+- [Linux on ARM64](#linux-on-arm64)
+- [macOS Intel CPU](#macos-intel-cpu)
+- [macOS Apple CPU](#macos-apple-cpu)
 - [Docker](#docker)
-- [macOS](#macos)
-- [Windows](#windows)
+- [Windows Intel, AMD64](#windows-intel-amd64)
+- [Windows ARM](#windows-arm)
 - [Compile from Source](#compile-from-source)
 
-
-## Linux
-
-{{< tabs name="linuxtab" >}}
-{{{< tab name="Intel, AMD" codelang="bash" >}}
+## Linux on Intel, AMD64
+Download, untar
+```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-amd64.tar.gz | tar xvz
-{{< /tab >}}
-{{< tab name="ARM" codelang="bash" >}}
+```
+Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+## Linux on ARM64
+Download, untar
+```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-arm64.tar.gz | tar xvz
-{{< /tab >}}}
-{{< /tabs >}}
-
+```
 Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
 
+## macOS Intel CPU
+Download, untar
+```bash
+curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-amd64.tar.gz | tar xvz
+```
+Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+
+## macOS Apple CPU
+Download, untar
+```bash
+curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-arm64.tar.gz | tar xvz
+```
+Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
 
 ## Docker
-Docker is a great way to use <code>DeadSFU</code>. If you are new to Docker, you might find it easier to learn <code>DeadSFU</code> with plain-old binaries. But, we offer both ways to use <code>DeadSFU</code>, so it's up to you.
-
-{{< alert icon="💡" text="There is nothing to install to use <code>DeadSFU</code> with Docker. But you must have a system with Docker already installed." />}}
-
 {{< alert icon="💡" text="Docker is tightly coupled with the Linux kernel. For performance reasons we recommend only using <code>DeadSFU</code> with Docker on Linux systems." />}}
-
+Pull the image
+```bash
+docker pull x186k/deadsfu
+```
 Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
 
-## macOS
-
-{{< tabs name="macostab" >}}
-{{{< tab name="Intel CPUs" codelang="bash" >}}
-curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-amd64.tar.gz | tar xvz
-{{< /tab >}}
-{{< tab name="Apple CPUs" codelang="bash" >}}
-curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-arm64.tar.gz | tar xvz
-{{< /tab >}}}
-{{< /tabs >}}
-
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
-
-## Windows
+## Windows Intel, AMD64
 {{< alert icon="💡" text="These directions work on Windows 10 build# >=17063 or Windows Server 2019" />}} 
-
-{{< tabs name="windowstab" >}}
-{{{< tab name="Intel & AMD CPUs" codelang="bash" >}}
+Download, untar
+```bash
 curl  https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp
-{{< /tab >}}
-{{< tab name="ARM" codelang="bash" >}}
-# contact us if you need Windows/ARM binaries, or submit a PR after Go 1.17 release
-{{< /tab >}}}
-{{< /tabs >}}
-
+```
 Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+
+## Windows ARM
+*contact us if you need Windows/ARM binaries, or submit a PR after Go 1.17 release*
 
 ## Compile from Source
 There are two repos you need to compile from source: `deadsfu` and `deadsfu-binaries`.
