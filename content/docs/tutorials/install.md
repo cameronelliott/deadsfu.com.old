@@ -22,7 +22,6 @@ toc: true
 
 
 ## Linux
-{{< alert icon="💡" text="<code>amd64</code> binaries are what most people need for Linux. Much less common is Linux servers running on <code>arm64</code> processors." />}}
 
 {{< tabs name="linuxtab" >}}
 {{{< tab name="Intel, AMD" codelang="bash" >}}
