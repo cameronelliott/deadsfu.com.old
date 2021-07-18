@@ -9,7 +9,7 @@ images: []
 menu:
   docs:
     parent: "tutorials"
-weight: 130
+weight: 1
 toc: true
 ---
 - [Linux on Intel, AMD64](#linux-on-intel-amd64)
