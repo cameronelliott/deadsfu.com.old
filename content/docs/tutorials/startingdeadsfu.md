@@ -1,5 +1,5 @@
 ---
-title: "Starting DeadSFU Tutorial"
+title: "Browser-in and Browser-out"
 description: "How to run DeadSFU."
 lead: "How to run DeadSFU."
 date: 2020-10-13T15:21:01+02:00
@@ -15,31 +15,31 @@ toc: true
 
 
 ### Start the SFU:
+
+You should have a file: `deadsfu` or `deadsfu.exe`, or Docker image ready.
+
 {{< tabs name="runtab" >}} 
 {{< tab name="Linux or macOS" codelang="bash" >}}
-./deadsfu -s https://cameron42.ddns5.com
+./deadsfu https://cameron42.ddns5.com:8443
 {{< /tab >}}}
 {{< tab name="Windows" codelang="bash" >}}
-./deadsfu.exe -s https://cameron42.ddns5.com
+./deadsfu.exe https://cameron42.ddns5.com:8443
 {{< /tab >}}}
 {{{< tab name="Using Docker" codelang="bash" >}}
-docker run --network host x186k/deadsfu /app/main -s https://cameron42.ddns5.com
+docker run --network host x186k/deadsfu /app/main https://cameron42.ddns5.com:8443
 {{< /tab >}}
 {{< /tabs >}}
 
-### Wait for the HTTPS-certificate to be aquired:
-  
-Wait for this message to be output:
+The SFU will print some informational mesages.
 
-`deadsfu HTTPS READY: HTTPS Certificate Acquired`
+Wait 5-20 seconds for this message: `HTTPS READY: Certificate Acquired`
 
-The first time aquiring the cert it can take a little while.  
-Usually it takes under 10 seconds, although it can take up to 30 seconds.  
-Please re-use hostnames when possible, this will save you time from waiting, and reduce our load.
+Open your browser to the console: `https://cameron42.ddns5.com:8443`
+
 
 ### Your SFU is now ready to use.
 
-{{< alert icon="💡" text="You can use whatever hostname you want in front of .ddns5.com, but it will save you trouble if you choose a word unlikley to be used by other people. It will also save you time, if you keep re-using the same set of hostnames. We suggest a set of less than ten (hostnames) to be gracious." />}}
+{{< alert icon="💡" text="Instead of cameron42, you can choose another hostname. When you re-use a hostname, please re-use hostnames from the same IP address." />}}
 
 
 
@@ -122,6 +122,4 @@ let elems = document.querySelectorAll('code')
 for (i = 0; i < elems.length; i++) {
   replace(elems[i],"cameron42",namenum)
 }
-
-
 </script> 
