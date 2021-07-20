@@ -2,8 +2,8 @@
 title: "Video: Browser-input streaming with simulcast"
 # description: "WebRTC video tutorial on simulcast broadcasting from the browser."
 # lead: "WebRTC video tutorial on simulcast broadcasting from the browser."
-date: 2020-11-04T09:19:42+01:00
-lastmod: 2020-11-04T09:19:42+01:00
+date: 2021-07-20T09:19:42+01:00
+lastmod: 2021-07-20T09:19:42+01:00
 draft: false
 weight: 50
 images: []
