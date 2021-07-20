@@ -1,7 +1,7 @@
 ---
-title: "Browser-in and Browser-out"
-description: "How to run DeadSFU."
-lead: "How to run DeadSFU."
+title: "Browser-input Streaming"
+# description: "Browser-input Streaming"
+# lead: "Browser-input Streaming"
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -13,6 +13,10 @@ weight: 130
 toc: true
 ---
 
+
+### Install
+
+You need to download and untar the binary from the install page, before starting this walkthough.
 
 ### Start the SFU:
 
