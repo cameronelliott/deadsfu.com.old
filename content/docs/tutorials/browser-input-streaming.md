@@ -43,8 +43,7 @@ Open your browser to the console: `https://cameron42.ddns5.com:8443`
 
 ### Your SFU is now ready to use.
 
-{{< alert icon="💡" text="Instead of cameron42, you can choose another hostname. When you re-use a hostname, please re-use hostnames from the same IP address." />}}
-
+Instead of `cameron42`, you may use another hostname. Your hostname will be tied to the IP address of the server.
 
 
 ## Open Browser to Send/Receive Page
