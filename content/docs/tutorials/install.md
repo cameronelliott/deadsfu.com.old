@@ -26,27 +26,27 @@ Download, untar
 ```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-amd64.tar.gz | tar xvz
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 ## Linux on ARM64
 Download, untar
 ```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-linux-arm64.tar.gz | tar xvz
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 
 ## macOS Intel CPU
 Download, untar
 ```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-amd64.tar.gz | tar xvz
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 
 ## macOS Apple CPU
 Download, untar
 ```bash
 curl -sL https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-darwin-arm64.tar.gz | tar xvz
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 
 ## Docker
 {{< alert icon="💡" text="Docker is tightly coupled with the Linux kernel. For performance reasons we recommend only using <code>DeadSFU</code> with Docker on Linux systems." />}}
@@ -54,7 +54,7 @@ Pull the image
 ```bash
 docker pull x186k/deadsfu
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 
 ## Windows Intel, AMD64
 {{< alert icon="💡" text="These directions work on Windows 10 build# >=17063 or Windows Server 2019" />}} 
@@ -62,7 +62,7 @@ Download, untar
 ```bash
 curl  https://github.com/x186k/deadsfu/releases/latest/download/deadsfu-windows-amd64.zip -sLo tmp && tar -xvf tmp && del tmp
 ```
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
 
 ## Windows ARM
 *contact us if you need Windows/ARM binaries, or submit a PR after Go 1.17 release*
@@ -94,4 +94,4 @@ Build with Go:
 go build .
 ```
 
-Jump to [Starting DeadSFU]({{< relref "startingdeadsfu" >}}).
+Jump to [Starting DeadSFU]({{< relref "browser-input-streaming" >}}).
