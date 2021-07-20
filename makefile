@@ -12,8 +12,8 @@ restart:
 	
 deploy:
 	./bin/hugo/hugo --gc --minify
-	ssh root@165.227.51.131 mkdir -p /root/public/3419512222
-	rsync -ar public/ root@165.227.51.131:/root/public/3419512222
+	ssh root@165.227.51.131 mkdir -p /root/public
+	rsync -ar public/ root@165.227.51.131:/root/public
 	tar czvf - --exclude node_modules . | ssh root@165.227.51.131 "cat > /root/public/deadsfu.com.tgz"
 
 

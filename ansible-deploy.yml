@@ -46,12 +46,12 @@
 
     - name: Creates directory
       file:
-        path: /root/public/3419512222
+        path: /root/public
         state: directory
     - name: copy hugo output up
       ansible.posix.synchronize:
         src: public/
-        dest: /root/public/3419512222
+        dest: /root/public
 
 
 
