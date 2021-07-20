@@ -1,7 +1,7 @@
 ---
-title: "OBS-in, Browser-out with FTL"
-description: "How to run DeadSFU."
-lead: "How to run DeadSFU."
+title: "OBS-input Streaming"
+# description: "OBS-input Streaming"
+# lead: "OBS-input Streaming"
 date: 2020-10-13T15:21:01+02:00
 lastmod: 2020-10-13T15:21:01+02:00
 draft: false
@@ -16,10 +16,8 @@ toc: true
 
 ### Start the SFU:
 
-You should have a `deadsfu` or `deadsfu.exe`, or 
-be pulled the Docker image.
-
-
+You should have a `deadsfu` or `deadsfu.exe` file from installing, or 
+if using Docker, no install is necessary.
 
 {{< tabs name="runtab" >}} 
 {{< tab name="Linux or macOS" codelang="bash" >}}
