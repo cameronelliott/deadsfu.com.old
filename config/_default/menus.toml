@@ -37,3 +37,13 @@
 #   name = "Privacy"
 #   url = "/privacy-policy/"
 #   weight = 10
+
+[[footer]]
+  name = "Theme by Doks"
+  url = "https://getdoks.org/"
+  weight = 999
+
+[[footer]]
+  name = "Email US"
+  url = "http://localhost:1313/docs/help/getting-help/"
+  weight = 10
