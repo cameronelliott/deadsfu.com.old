@@ -55,7 +55,7 @@ portraitPhotoWidths = [800, 700, 600, 500]
 lqipWidth = "20x"
 
 # Footer
-footer = "Powered by <a href=\"https://pion.ly/\">Pion</a>, <a href=\"https://caddyserver.com/\">Caddy</a>, <a href=\"https://www.docker.com/\">Docker</a>, and <a href=\"https://getdoks.org/\">Doks</a>"
+footer = "<b><a href=\"https://docs.google.com/forms/d/e/1FAIpQLSd8rzXabvn73YC_GPRtXZb1zlKPeOEQuHDdVi4m9umJqEaJsA/viewform?usp=sf_link\">Get the Newsletter for Updates</a></b>"
 # copyRight = "Copyright (c) 2020-2021 Henk Verlinde"
 
 # Alert
